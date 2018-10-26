@@ -1,0 +1,15 @@
+drop table ADDR_CODE_PARA;
+drop table LOAN_ACCT_INFO;
+drop table LOAN_CARD_INFO;
+drop table LOAN_CHECK_DATA;
+drop table LOAN_CHECK_RESULT;
+drop table LOAN_CUST_INFO;
+drop table LOAN_DUE_PRE_REG;
+drop table LOAN_INFO;
+drop table LOAN_SUB_ACCT;
+drop table LOAN_SUB_ACCT_REG;
+drop table LOAN_SUB_BAL;
+drop table LOAN_SUB_CHECK;
+drop table LOAN_TAX_REG;
+drop table LOAN_TYPE_PARA;
+drop table LOAN_VMS_INFO;

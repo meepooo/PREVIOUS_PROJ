@@ -1,0 +1,68 @@
+#!!不要随意修改本文件
+##########################################################################
+##########################################################################
+# 版权所有:杭州恒生电子股份有限公司
+# 项目名称:综合应用平台（GAPS）项目
+# 版    本:V1.0
+# 操作系统:AIX5.3(32位)
+# 文件描述:通用MAKEFILE	for AIX
+# 数 据 库: Informix 9
+# 中 间 件: HSXP 1.0
+##########################################################################
+##########################################################################
+
+DATE=`date +"%Y%m%d%H%M"`
+DATETOS=`date +"%Y%m%d%H%M%S"`
+BUILDDATETIME=$(DATE)
+
+
+#INFORMIX --S
+ESQL=esql
+INFOR_LIBS=-L${INFORMIXDIR}/lib -L${INFORMIXDIR}/lib/esql
+INFOR_INCL=-I${INFORMIXDIR}/incl -I${INFORMIXDIR}/incl/esql ${APPEH_INCL}
+
+#INFORMIX --E
+
+#MACRO
+UNAME=`uname -s`
+MOS=-D_MSGQSUPPORT
+DBS=-DDBS_INFORMIX_7 -DDBS_INFORMIX -D_H_LOCALEDEF
+
+DEBUG=-DUSE_SHMRMA -DTIMEDEBUG -DUSE_SPASERIAL -DDEBUG_TRACE -DDEBUG -DDEBUG_MEMLEAK
+
+E_DBS=-EDDBS_INFORMIX_7 -EDDBS_INFORMIX
+E_DEBUG=-EDDEBUG -EDTIMEDEBUG
+#MACRO
+DB_CCFLAGS=$(INFOR_INCL) -I${HOME}/incl/gaps_appdbeh -I${HOME}/incl/gaps_appdbeh/INFORMIX
+#######################################
+#COMPILE FLAG --S
+
+INFOR_CCFLAGS=${DB_CCFLAGS}
+
+#COMPILE FLAG --E
+#######################################
+#LINK FLAG --S
+
+INFOR_LIBFLAG=${INFOR_LIBS}
+LIBFLAGS=  ${INFOR_LIBFLAG} -brtl
+
+#LINK FLAG --E
+#######################################
+#LIB --S
+
+LIB_INFOR=-lifsql -lifasf -lifgen -lifos -lifgls -lc_r -ldl -ltli_r -lm_r ${INFORMIXDIR}/lib/esql/checkapi.o -lifglx
+LIB_DBS=$(LIB_INFOR)
+
+#LIB --E
+##########################################################################
+.SUFFIXES: .ec .c .o
+
+#.c.o:
+	#${CC} -c ${CCFLAGS} ${DEBUG} ${DBS} ${MOS} $<
+
+.ec.c:
+	@rm -f $*.c
+	${ESQL}	-c -e ${INFOR_CCFLAGS} ${DEBUG} ${DBS}  ${MOS} ${E_DEBUG} ${E_DBS} $*.ec
+
+##########################################################################
+

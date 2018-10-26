@@ -1,0 +1,36 @@
+drop index index_tbl_jzzf_czzh;
+drop table TBL_JZZF_CZZH;
+CREATE TABLE
+    TBL_JZZF_CZZH
+    (
+        CZBM CHARACTER(12) NOT NULL,
+	BGDEPTCODE CHARACTER(12) NOT NULL,
+        CZZH CHARACTER(32) NOT NULL,
+	CXZT CHAR(1) NOT NULL,
+	DSBZ CHAR(1) NOT NULL,
+	WHRQ CHAR(8),
+        CONSTRAINT Pk_jzzf_czzh PRIMARY KEY (CZZH)
+    );
+
+create unique index index_tbl_jzzf_czzh on tbl_jzzf_czzh( CZBM,CZZH );
+COMMENT ON TABLE TBL_JZZF_CZZH
+IS
+    '财政账户表';
+COMMENT ON COLUMN TBL_JZZF_CZZH.CZBM
+IS
+    '财政编码';
+COMMENT ON COLUMN TBL_JZZF_CZZH.BGDEPTCODE
+IS
+    '预算单位代码';
+COMMENT ON COLUMN TBL_JZZF_CZZH.CZZH
+IS
+    '财政账号';
+COMMENT ON COLUMN TBL_JZZF_CZZH.CXZT
+IS
+    '查询状态 0实时可查询 1实时不可查询';
+COMMENT ON COLUMN TBL_JZZF_CZZH.DSBZ
+IS
+    '定时标志 0参与定时查询 1不参与定时查询';
+COMMENT ON COLUMN TBL_JZZF_CZZH.WHRQ
+IS
+    '维护日期';

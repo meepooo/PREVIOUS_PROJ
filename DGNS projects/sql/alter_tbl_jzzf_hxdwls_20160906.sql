@@ -1,0 +1,9 @@
+ALTER TABLE GAPSUSR.tbl_jzzf_hxdwls ALTER COLUMN FY SET DATA TYPE VARCHAR ( 100 ) ;
+ALTER TABLE GAPSUSR.tbl_jzzf_hxdwls ALTER COLUMN BZ SET DATA TYPE VARCHAR ( 100 ) ;
+ALTER TABLE GAPSUSR.tbl_jzzf_hxdwls_tmp ALTER COLUMN FY SET DATA TYPE VARCHAR ( 100 ) ;
+ALTER TABLE GAPSUSR.tbl_jzzf_hxdwls_tmp ALTER COLUMN BZ SET DATA TYPE VARCHAR ( 100 ) ;
+
+reorg table GAPSUSR.tbl_jzzf_hxdwls;
+reorg table GAPSUSR.tbl_jzzf_hxdwls_tmp;
+
+

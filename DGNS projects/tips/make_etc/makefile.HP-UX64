@@ -1,0 +1,5 @@
+
+#{$Id: makefile.HP-UX64 2169 2012-12-27 11:16:30Z tianhc $}
+MOS=-D__OS_HPUX__ 
+CCFLAG=+DD64 +u1 -Agcc
+LDFLAG=+DD64 +u1 

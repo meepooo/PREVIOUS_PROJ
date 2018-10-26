@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GB2312"?>
+<root>
+    <!-- subsystem子系统名称 必输 -->
+    <subsystem>yxt</subsystem>
+    <cpdm>0030002</cpdm>
+    <transcode>700150</transcode>
+</root>

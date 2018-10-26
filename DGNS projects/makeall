@@ -1,0 +1,35 @@
+echo "开始编译【esb组件】"
+cd ~/app/esb/comp
+make clean
+make
+echo "编译【esb组件】完成"
+
+echo "开始编译【gxp通讯组件】"
+cd ~/app/gxpcomm
+make clean
+make
+echo "编译【gxp通讯组件】完成"
+
+echo "开始编译【系统公用组件】"
+cd ~/app/pub
+make clean
+make
+echo "编译【系统公用组件】完成"
+
+echo "开始编译【交易公用组件】"
+cd ~/app/transpub
+make clean
+make
+echo "编译【交易公用组件】完成"
+
+echo "开始编译【莞医通组件】"
+cd ~/app/yyt/
+make clean
+make
+echo "编译【莞医通组件】完成"
+
+echo "开始编译【院线通组件】"
+cd ~/app/yxt/comp
+make clean
+make
+echo "编译【院线通组件】完成"

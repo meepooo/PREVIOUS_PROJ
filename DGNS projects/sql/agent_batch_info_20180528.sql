@@ -1,0 +1,1 @@
+alter table agent_batch_info add column th_stat char(2);

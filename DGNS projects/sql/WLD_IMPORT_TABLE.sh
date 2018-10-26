@@ -1,0 +1,11 @@
+db2 connect to gapsdb user gapsusr
+db2 "delete from LOAN_TYPE_PARA WHERE 1=1"
+db2 "import from LOAN_TYPE_PARA.txt of del insert into LOAN_TYPE_PARA"
+db2 "delete from LOAN_SUB_ACCT WHERE 1=1"
+db2 "import from LOAN_SUB_ACCT.txt of del insert into LOAN_SUB_ACCT"
+db2 "delete from ADDR_CODE_PARA WHERE 1=1"
+db2 "import from ADDR_CODE_PARA.txt of del insert into ADDR_CODE_PARA"
+db2 "delete from LOAN_SUB_CHECK WHERE 1=1"
+db2 "import from LOAN_SUB_CHECK.txt of del insert into LOAN_SUB_CHECK"
+db2 "delete from LOAN_SUB_ACCT_PARA WHERE 1=1"
+db2 "import from LOAN_SUB_ACCT_PARA.txt of del insert into LOAN_SUB_ACCT_PARA"

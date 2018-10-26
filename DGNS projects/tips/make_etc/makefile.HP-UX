@@ -1,0 +1,5 @@
+
+#{$Id: makefile.HP-UX 2173 2012-12-28 05:36:04Z shining $}
+MOS=-D__OS_HPUX__ 
+OS_CCFLAG=+DD32 +u1 +z +W2550,2177,4212,2174 -mt -Agcc 
+OS_LDFLAG=-b

@@ -1,0 +1,1 @@
+make -f mk.${GAPSPLATFORM} $1

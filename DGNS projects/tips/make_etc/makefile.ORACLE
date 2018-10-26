@@ -1,0 +1,41 @@
+E_DBS=define=DBS_ORACLE define=DBS_ORACLE_8
+DBS=-DDBS_ORACLE_8 -DDBS_ORACLE -DDBS_ORACLE${OBJECT_MODE}
+#######################################
+#ORACLE --S
+PROC=proc
+
+ORACLE_LIBS=-L${ORACLE_HOME}/lib
+ORARDBMS_P_INCL=${ORACLE_HOME}/rdbms/public
+ORANET_P_INCL=${ORACLE_HOME}/network/public
+ORADBMS_D_INCL=${ORACLE_HOME}/rdbms/demo
+ORACLE_INCL=-I${ORACLE_HOME}/precomp/public -I${ORARDBMS_P_INCL} -I${ORANET_P_INCL} -I${ORADBMS_D_INCL}
+
+
+ORA_ORACLE_INCL=include=${ORACLE_HOME}/precomp/public\
+include=${ORACLE_HOME}/rdbms/public \
+include=${ORACLE_HOME}/network/public \
+include=${ORACLE_HOME}/rdbms/demo
+
+#新增用户级头文件连接，在用户makefile中自行加入${APPEH_INCL}
+ORA_GAPS_INCL=include=${HOME}/incl \
+include=${HOME}/incl/gaps_appdbeh \
+include=${HOME}/incl/gaps_appdbeh/ORACLE \
+${APPEH_INCL}
+
+ORA_GAPS_LIBINCL=include=${HOME}/libincl
+
+#ORACLE --E
+DB_LIBS=${ORACLE_LIBS} -lclntsh
+DB_CCFLAGS=-I${HOME}/incl/gaps_appdbeh -I${HOME}/incl/gaps_appdbeh/ORACLE
+##########################################################################
+PROCFLAGS= unsafe_null=yes mode=oracle type_code=ansi dbms=V8 \
+dynamic=ansi parse=none release_cursor=no lines=yes errors=yes \
+sqlcheck=syntax ireclen=512 ${ORA_GAPS_INCL} ${ORA_GAPS_LIBINCL} \
+${ORA_ORACLE_INCL} \
+${ORA_HSXP_INCL} ${E_DBS}
+##########################################################################
+.SUFFIXES: .ec .c
+
+.ec.c:
+	@rm -f $*.c
+	${PROC} $(PROCFLAGS)  iname=$*.ec

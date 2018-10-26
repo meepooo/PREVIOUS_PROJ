@@ -1,0 +1,2 @@
+insert into app_cskz (CSJZ, CSLX, CSTJ, JDM, JDZ, REMARK, JZLX, WHJG, WHGY, WHSJ)
+values ('K_DXZP_Except_HY', '0', '040', '/gabdxzp/exception_hy', '0', '“Ï≥£∫Û÷√', '0', '00000', 'admin', '20151019090000');
