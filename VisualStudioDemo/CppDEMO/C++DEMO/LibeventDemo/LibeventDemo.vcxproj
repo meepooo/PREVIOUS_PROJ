@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7DBC772E-EFC2-4D6D-A9FE-3DCA51333BD8}</ProjectGuid>
-    <RootNamespace>CDEMO</RootNamespace>
+    <ProjectGuid>{EFA5C731-43E4-4FC9-A4F9-494FB7837A0B}</ProjectGuid>
+    <RootNamespace>LibeventDemo</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,15 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Complex.cpp" />
-    <ClCompile Include="Computer.cpp" />
-    <ClCompile Include="DataStructure.cpp" />
-    <ClCompile Include="vecDemo.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Complex.h" />
-    <ClInclude Include="DataStructure.h" />
-    <ClInclude Include="vecDemo.h" />
+    <ClCompile Include="client.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

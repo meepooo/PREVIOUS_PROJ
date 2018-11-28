@@ -37,18 +37,18 @@ void DataStructure<T>::setData(const T& dt)
 
 //class DataStucture main function for test only
 using namespace std;
-int main()
-{
-	cout << "hello world!" << endl;
-
-	DataStructure<int> data(1);
-	cout << data.getData() << endl;
-
-	DataStructure<double> *p = new DataStructure<double>;
-	cout << p->getData() << endl;
-	p->setData(2.02);
-	cout << p->getData() << endl;
-
-	cin.get();
-	return 0;
-}
+//int main()
+//{
+//	cout << "hello world!" << endl;
+//
+//	DataStructure<int> data(1);
+//	cout << data.getData() << endl;
+//
+//	DataStructure<double> *p = new DataStructure<double>;
+//	cout << p->getData() << endl;
+//	p->setData(2.02);
+//	cout << p->getData() << endl;
+//
+//	cin.get();
+//	return 0;
+//}

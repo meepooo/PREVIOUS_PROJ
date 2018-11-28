@@ -15,28 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vecDemo.cpp">
+    <ClCompile Include="client.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Complex.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DataStructure.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Computer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="vecDemo.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Complex.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DataStructure.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

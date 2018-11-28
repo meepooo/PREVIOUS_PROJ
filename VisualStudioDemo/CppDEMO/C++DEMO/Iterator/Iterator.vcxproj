@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7DBC772E-EFC2-4D6D-A9FE-3DCA51333BD8}</ProjectGuid>
-    <RootNamespace>CDEMO</RootNamespace>
+    <ProjectGuid>{33EA997A-54AC-4C83-8478-07E7063CAC77}</ProjectGuid>
+    <RootNamespace>Iterator</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,15 +110,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Complex.cpp" />
-    <ClCompile Include="Computer.cpp" />
-    <ClCompile Include="DataStructure.cpp" />
-    <ClCompile Include="vecDemo.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Complex.h" />
-    <ClInclude Include="DataStructure.h" />
-    <ClInclude Include="vecDemo.h" />
+    <ClCompile Include="deque_container.cpp" />
+    <ClCompile Include="functional.cpp" />
+    <ClCompile Include="Iterator1.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="priority_queue.cpp" />
+    <ClCompile Include="set.cpp" />
+    <ClCompile Include="stack.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
