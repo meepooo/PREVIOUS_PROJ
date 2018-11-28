@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src.main.java"/>
+	<classpathentry kind="src" path="src.main.resources"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-aop-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-aop-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-aop-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-aspects-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-aspects-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-aspects-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-beans-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-beans-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-beans-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-indexer-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-indexer-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-indexer-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-support-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-support-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-context-support-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-core-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-core-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-core-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-expression-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-expression-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-expression-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-instrument-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-instrument-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-instrument-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jcl-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jcl-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jcl-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jdbc-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jdbc-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jdbc-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jms-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jms-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-jms-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-messaging-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-messaging-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-messaging-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-orm-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-orm-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-orm-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-oxm-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-oxm-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-oxm-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-test-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-test-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-test-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-tx-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-tx-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-tx-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-web-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-web-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-web-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-webflux-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-webflux-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-webflux-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-webmvc-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-webmvc-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-webmvc-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-websocket-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-websocket-5.0.2.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-framework-5.0.2.RELEASE-dist/spring-framework-5.0.2.RELEASE/libs/spring-websocket-5.0.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-artifact-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-builder-support-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-compat-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-core-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-embedder-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-model-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-model-builder-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-plugin-api-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-repository-metadata-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-resolver-api-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-resolver-connector-basic-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-resolver-impl-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-resolver-provider-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-resolver-spi-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-resolver-transport-wagon-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-resolver-util-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-settings-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-settings-builder-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-shared-utils-3.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/maven-slf4j-provider-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/apache-maven-3.5.2-bin/apache-maven-3.5.2/lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-boot-1.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-boot-1.4.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/spring-boot-autoconfigure-1.4.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/log4j-api-2.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/spring-aop-4.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/spring-beans-4.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/spring-context-4.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/spring-core-4.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/spring-expression-4.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/spring-test-4.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/spring/struts-2.5.14.1/lib/spring-web-4.1.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/zookeeper-3.3.6/zookeeper-3.3.6/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/log4j-over-slf4j-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/log4j-over-slf4j-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-android-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-android-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-api-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-ext-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-ext-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-jcl-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-jcl-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-jdk14-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-jdk14-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-log4j12-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-log4j12-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-migrator-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-nop-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-nop-1.7.25-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-simple-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-simple-1.7.25-sources.jar"/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/log4j-core-2.9.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
