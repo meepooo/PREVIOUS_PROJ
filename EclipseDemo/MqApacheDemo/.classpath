@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/httpclient_jar/httpclient-4.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/httpclient_jar/httpclient-4.2.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/httpclient_jar/httpclient-4.2.1-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/httpclient_jar/camel-base64-2.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/commons-codec-1.11-bin/commons-codec-1.11/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/commons-codec-1.11-bin/commons-codec-1.11/commons-codec-1.11-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/commons-codec-1.11-bin/commons-codec-1.11/commons-codec-1.11-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/commons-codec-1.11-bin/commons-codec-1.11/commons-codec-1.11-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/commons-codec-1.11-bin/commons-codec-1.11/commons-codec-1.11-test-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

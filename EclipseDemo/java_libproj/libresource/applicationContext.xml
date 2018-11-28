@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+     
+     <!-- 配置bean，属性配置方式 -->
+     <bean id="helloWorld"  class="com.nia.rpc.example.server.SpringServerConfig">
+         <property name="name" value="spring"></property>
+     </bean>
+    
+     <!-- 通过构造方法配置bean属性 -->
+    <bean id="helloWorld2" class="hello.HelloWorld">
+         <constructor-arg value="spring2" index="0"></constructor-arg>
+     </bean>
+</beans>

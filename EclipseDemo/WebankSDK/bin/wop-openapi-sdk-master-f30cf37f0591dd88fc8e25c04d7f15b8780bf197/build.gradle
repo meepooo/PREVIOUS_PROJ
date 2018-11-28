@@ -1,0 +1,338 @@
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: "jacoco"
+
+javadoc {
+    //include("**/controller/**")
+    //include("**/PaymentAccountDTO.java")
+    //include("**/StatusInfoDTO.java")
+    //include("**/OtpDTO.java")
+    //include("**/OAuth2TokenDTO.java")
+    //include("**/TokenResponseDTO.java")
+    //include("**/TicketResponseDTO.java")
+
+    //include("**/WopRequestVersion.java")
+    //include("**/WopRequestOneDayMaxLimit.java")
+    //include("**/WopServiceDispatcher.java")
+
+    //include("**/ApiTicketDTO.java")
+    //include("**/TicketDTO.java")
+    //exclude("**/t8tloan/**")
+    //exclude("**/dpmloan/**")
+    options.encoding = "UTF-8"
+    options.charSet = "UTF-8"
+}
+
+sourceCompatibility = 1.7
+
+def defaultEncoding = 'UTF-8'
+
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+
+
+jacoco {
+    toolVersion = "0.7.2.201409121644"
+    reportsDir = file("$buildDir/reports/jacoco")
+}
+
+
+task jacocoAllTestReport(type: JacocoReport, dependsOn: ["unitTest"]) {
+    sourceSets sourceSets.main
+    executionData files("$buildDir/jacoco/jacocoTest.exec")
+}
+
+repositories {
+    maven {
+        url "http://10.6.222.54:8081/nexus/content/groups/public/"
+    }
+
+    mavenLocal()
+    mavenCentral()
+
+}
+
+
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+
+    unitTest {
+        java {
+            srcDir 'src/unitTest/java'
+        }
+
+        resources {
+            srcDir 'src/unitTest/resources'
+        }
+    }
+
+
+    intTest {
+        java {
+            srcDir 'src/intTest/java'
+        }
+
+        resources {
+            srcDir 'src/intTest/resources'
+        }
+    }
+
+
+}
+
+clean {
+    delete 'dist'
+    delete 'build'
+}
+
+def httpclient_version = "4.5.1"
+
+List httpclient = [
+        "org.apache.httpcomponents:httpclient:$httpclient_version",
+        "org.apache.httpcomponents:httpmime:$httpclient_version"
+]
+
+List apache_commons = [
+        "commons-logging:commons-logging:1.2",
+        "org.apache.commons:commons-lang3:3.4"
+]
+
+
+List jackson = [
+        'com.fasterxml.jackson.core:jackson-core:2.6.3',
+        'com.fasterxml.jackson.core:jackson-databind:2.6.3',
+        'com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.6.3'
+]
+
+
+
+List guava = [
+        'com.google.guava:guava:18.0'
+]
+
+
+List testng = [
+        "org.testng:testng:6.9.10"
+]
+
+dependencies {
+
+    compile httpclient, jackson, guava,apache_commons
+
+    testCompile httpclient,jackson, guava,apache_commons,testng
+
+    runtime httpclient, jackson, guava,apache_commons
+}
+
+
+task createProject << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+
+    delete file('src/test')
+    delete file('src/unitTest')
+    delete file('src/intTest')
+
+}
+
+
+task unitTest(type: Test, dependsOn: ['assemble']) {
+    def logHome = System.getProperty('openapi.log.home', './logs')
+
+    description = "run unit tests"
+    testClassesDir = project.sourceSets.unitTest.output.classesDir
+    classpath = project.sourceSets.unitTest.runtimeClasspath
+    //systemProperties['jar.path'] = jar.archivePath
+
+    // enable TestNG support (default is JUnit)
+    //useTestNG()
+
+    // set a system property for the test JVM(s)
+    //systemProperty 'some.prop', 'value'
+
+    // explicitly include or exclude tests
+    include 'cn/webank/**/*UnitTest*'
+    //exclude 'org/boo/**'
+
+    // show standard out and standard error of the test JVM(s) on the console
+    testLogging.showStandardStreams = true
+
+    // set heap size for the test JVM(s)
+    minHeapSize = "128m"
+    maxHeapSize = "512m"
+
+    // set JVM arguments for the test JVM(s)
+    jvmArgs "-XX:MaxPermSize=64m", "-Dwebanksdk.log.home=$logHome "
+
+    // listen to events in the test execution lifecycle
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+
+
+    }
+
+    // listen to standard out and standard error of the test JVM(s)
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message)
+    }
+
+    doFirst {
+        copy {
+            from 'src/main/resources'
+            into testClassesDir
+            include '*.properties'
+        }
+    }
+
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpFile = file("$buildDir/jacoco/classpathdumps")
+    }
+
+
+}
+
+
+task intTest(type: Test, dependsOn: ['assemble']) {
+    def logHome = System.getProperty('openapi.log.home', './logs')
+
+    description = "run integration tests"
+    testClassesDir = project.sourceSets.intTest.output.classesDir
+    classpath = project.sourceSets.intTest.runtimeClasspath
+
+    // explicitly include or exclude tests
+    include 'cn/webank/**/*IntTest*'
+    //exclude 'org/boo/**'
+
+    // show standard out and standard error of the test JVM(s) on the console
+    testLogging.showStandardStreams = true
+
+    // set heap size for the test JVM(s)
+    minHeapSize = "128m"
+    maxHeapSize = "512m"
+
+    // set JVM arguments for the test JVM(s)
+    jvmArgs "-XX:MaxPermSize=64m", "-Dwebanksdk.log.home=$logHome "
+
+    // listen to events in the test execution lifecycle
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+
+        copy {
+            from 'src/main/resources'
+            into testClassesDir
+            include 'rmb-client.properties'
+            include 'gns-client.properties'
+        }
+    }
+
+    // listen to standard out and standard error of the test JVM(s)
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message)
+    }
+
+
+    doFirst {
+        copy {
+            from 'src/main/resources'
+            into testClassesDir
+            include 'rmb-client.properties'
+            include 'gns-client.properties'
+        }
+
+    }
+
+
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpFile = file("$buildDir/jacoco/classpathdumps")
+    }
+}
+
+//build.dependsOn intTest
+//compileJava.dependsOn clean
+compileJava.options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+
+javadoc {
+    source = sourceSets.main.java
+    classpath = configurations.compile
+    destinationDir = reporting.file("javadoc")
+}
+
+
+task packageJavadoc(type: Jar, dependsOn: ['javadoc']) {
+    from project.javadoc.destinationDir
+    classifier = 'javadoc'
+}
+
+task packageSources(type: Jar) {
+    from project.sourceSets.main.allSource
+    classifier = 'sources'  // either here or in artifacts block
+}
+
+
+artifacts {
+    archives packageJavadoc
+    archives packageSources
+}
+
+
+
+task copyJars(type: Copy) {
+    from configurations.runtime
+    into 'lib'
+}
+task dependency(type: Copy) {
+    from configurations.runtime
+    into 'build/dependency'
+}
+
+compileJava.dependsOn clean
+compileJava.options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+
+
+
+project.eclipseClasspath.doFirst {
+    // delay adding whenMerged till the entryAttributes are added (must be the last whenMerged)
+    project.eclipse.classpath.file.whenMerged { classpath ->
+        def includeDeps = project.configurations.getByName('runtime').collect { f -> f.absolutePath } as Set
+        classpath.entries.each { cp ->
+            if (cp instanceof org.gradle.plugins.ide.eclipse.model.Library) {
+                def include = includeDeps.contains(cp.path)
+                def attr = 'org.eclipse.jst.component.dependency'
+                if (!include) {
+                    cp.entryAttributes.remove(attr)
+                }
+            }
+        }
+    }
+}
+
+uploadArchives {
+    repositories {
+        flatDir(dirs: file('dist'))
+    }
+
+
+}
+
+//project.webAppDirName = 'src/main/webapp'
+
+//eclipse {
+//    wtp {
+//       component {
+//        	resource deployPath : '/', sourcePath: project.webAppDirName
+//       }
+//    }
+//}

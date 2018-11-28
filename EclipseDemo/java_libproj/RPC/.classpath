@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="com/nia/rpc/core/protocol/|com/nia/rpc/core/protocol/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/com/nia/rpc/core/protocol"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/lombok.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/kryo-2.24.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/netty-4.1.19.Final/netty-4.1.19.Final/jar/all-in-one/netty-all-4.1.19.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/slf4j-1.7.25/slf4j-1.7.25/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/commons-pool2-2.5.0-bin/commons-pool2-2.5.0/commons-pool2-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/琪/Desktop/腾讯云系统/rpc/guava-r07.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

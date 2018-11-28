@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>migo-rpc-provider</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>curator.client</name>
+			<type>2</type>
+			<location>C:/Users/琪/Desktop/腾讯云系统/rpc/apache-curator-4.0.0-source-release/apache-curator-4.0.0/curator-client/src/main/java</location>
+		</link>
+		<link>
+			<name>curator.framework</name>
+			<type>2</type>
+			<location>C:/Users/琪/Desktop/腾讯云系统/rpc/apache-curator-4.0.0-source-release/apache-curator-4.0.0/curator-framework/src/main/java</location>
+		</link>
+		<link>
+			<name>curator.recipes</name>
+			<type>2</type>
+			<location>C:/Users/琪/Desktop/腾讯云系统/rpc/apache-curator-4.0.0-source-release/apache-curator-4.0.0/curator-recipes/src/main/java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

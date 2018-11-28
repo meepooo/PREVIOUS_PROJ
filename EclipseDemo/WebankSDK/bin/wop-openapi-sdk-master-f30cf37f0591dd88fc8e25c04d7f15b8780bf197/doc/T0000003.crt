@@ -1,0 +1,68 @@
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 64219 (0xfadb)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: CN=WeBank DEV CA, O=WeBank Co., Ltd., L=Shenzhen, C=CN
+        Validity
+            Not Before: Jan 11 09:30:52 2016 GMT
+            Not After : Jan  8 09:30:52 2026 GMT
+        Subject: C=CN, ST=Guangdong, O=WeBank Co., Ltd., OU=IT-Dept., CN=T0000003
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b4:7d:5e:15:72:9f:45:36:e0:d2:3f:0b:c1:ec:
+                    ed:e1:d8:09:ee:ab:b5:b9:8b:33:90:bd:65:c0:8c:
+                    3f:0e:d3:ce:08:47:56:07:0c:45:ae:a0:c4:7f:1d:
+                    29:a0:42:07:1a:d7:96:2e:1f:ee:e8:ee:2c:4f:4a:
+                    9e:d9:dc:df:4b:d0:6e:6e:9b:fc:c9:a6:b5:c1:00:
+                    d4:fe:95:c3:08:2b:07:e8:a6:d3:15:ec:1b:b2:50:
+                    b6:1c:7d:4a:29:e2:b4:69:c6:5b:0d:a8:f3:d8:ed:
+                    bb:dd:ef:19:ab:b0:bc:99:71:3c:59:28:94:c5:84:
+                    9b:16:70:3d:07:22:d4:09:fa:9b:dd:d0:90:c1:81:
+                    37:f3:3c:87:3b:c2:bb:d2:d6:68:fc:90:f1:32:18:
+                    10:85:1d:93:1c:ff:7c:f6:8a:2f:c3:0a:4f:60:4c:
+                    c4:9d:5e:e3:7c:f2:3c:fb:b0:f1:68:c0:02:57:d3:
+                    6b:bc:d4:46:dd:20:b4:77:21:89:68:7a:d3:d0:96:
+                    af:7d:aa:8d:08:dc:9c:0f:a1:15:26:e7:16:89:5a:
+                    7b:a3:70:df:68:38:78:1c:43:aa:58:a9:98:4b:41:
+                    25:ed:ef:75:11:0f:53:ee:e2:96:b6:83:af:8a:b8:
+                    c0:8a:f7:2a:17:0b:ba:9a:e0:2d:df:53:0c:f2:13:
+                    5c:49
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         2f:68:a5:4d:2d:99:ee:9e:99:b6:8c:27:a4:d7:2a:e3:aa:82:
+         f0:58:12:34:8a:17:25:14:97:a5:7f:17:c8:1b:f8:34:69:28:
+         eb:fb:fd:2e:b1:af:16:26:96:c4:6c:60:2a:10:07:ce:de:68:
+         19:e6:5c:d8:8b:17:0f:ab:b4:f8:6b:42:df:3a:05:ba:41:55:
+         05:e4:65:ee:65:c8:2f:38:44:d5:ad:0f:f6:c6:ea:69:4b:14:
+         00:d7:f6:1f:9e:43:cf:5e:9b:4e:d0:98:a0:85:70:ef:de:55:
+         94:78:6a:58:c6:0b:22:68:f5:5c:64:8f:4b:01:26:91:c8:bb:
+         a5:4e:9c:06:94:8d:eb:08:c0:89:b6:ad:f9:ca:72:90:47:d5:
+         ee:96:77:24:db:52:3f:9b:88:57:b8:75:32:10:48:86:bb:06:
+         80:3f:46:64:e0:3c:75:c2:5b:33:54:3c:21:21:0a:56:83:f7:
+         a9:99:ca:02:ad:b7:e5:f3:46:38:19:f9:0b:f9:79:03:58:fc:
+         c7:50:43:35:38:cc:40:16:98:c0:f1:fa:2c:d1:3b:41:48:4c:
+         82:9e:ff:a7:56:0c:33:bd:77:f9:38:c1:22:a8:3e:42:a0:25:
+         a7:8e:a0:3a:06:2a:92:03:5d:65:54:7b:c3:50:2c:80:88:3f:
+         9f:b4:4a:b0
+-----BEGIN CERTIFICATE-----
+MIIDKzCCAhMCAwD62zANBgkqhkiG9w0BAQUFADBTMRYwFAYDVQQDDA1XZUJhbmsg
+REVWIENBMRkwFwYDVQQKDBBXZUJhbmsgQ28uLCBMdGQuMREwDwYDVQQHDAhTaGVu
+emhlbjELMAkGA1UEBhMCQ04wHhcNMTYwMTExMDkzMDUyWhcNMjYwMTA4MDkzMDUy
+WjBiMQswCQYDVQQGEwJDTjESMBAGA1UECAwJR3Vhbmdkb25nMRkwFwYDVQQKDBBX
+ZUJhbmsgQ28uLCBMdGQuMREwDwYDVQQLDAhJVC1EZXB0LjERMA8GA1UEAwwIVDAw
+MDAwMDMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC0fV4Vcp9FNuDS
+PwvB7O3h2Anuq7W5izOQvWXAjD8O084IR1YHDEWuoMR/HSmgQgca15YuH+7o7ixP
+Sp7Z3N9L0G5um/zJprXBANT+lcMIKwfoptMV7BuyULYcfUop4rRpxlsNqPPY7bvd
+7xmrsLyZcTxZKJTFhJsWcD0HItQJ+pvd0JDBgTfzPIc7wrvS1mj8kPEyGBCFHZMc
+/3z2ii/DCk9gTMSdXuN88jz7sPFowAJX02u81EbdILR3IYloetPQlq99qo0I3JwP
+oRUm5xaJWnujcN9oOHgcQ6pYqZhLQSXt73URD1Pu4pa2g6+KuMCK9yoXC7qa4C3f
+UwzyE1xJAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAC9opU0tme6embaMJ6TXKuOq
+gvBYEjSKFyUUl6V/F8gb+DRpKOv7/S6xrxYmlsRsYCoQB87eaBnmXNiLFw+rtPhr
+Qt86BbpBVQXkZe5lyC84RNWtD/bG6mlLFADX9h+eQ89em07QmKCFcO/eVZR4aljG
+CyJo9Vxkj0sBJpHIu6VOnAaUjesIwIm2rfnKcpBH1e6WdyTbUj+biFe4dTIQSIa7
+BoA/RmTgPHXCWzNUPCEhClaD96mZygKtt+XzRjgZ+Qv5eQNY/MdQQzU4zEAWmMDx
++izRO0FITIKe/6dWDDO9d/k4wSKoPkKgJaeOoDoGKpIDXWVUe8NQLICIP5+0SrA=
+-----END CERTIFICATE-----
