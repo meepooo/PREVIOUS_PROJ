@@ -12,7 +12,7 @@ public class FileWriteDemo {
 //			 fw.flush();
 //			 fw.close();
 
-			FileReader fr = new FileReader("F:\\file\\1.txt");
+			FileReader fr = new FileReader("F:\\\\github\\\\sylucky.github.io\\\\index.html");
 
 			// ¿˚”√read(buf)∂¡»°
 			char[] cbuf = new char[2];
