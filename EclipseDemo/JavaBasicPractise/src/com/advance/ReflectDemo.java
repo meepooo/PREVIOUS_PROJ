@@ -1,10 +1,12 @@
 package com.advance;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class ReflectDemo {
-	public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
 		//反射的基本使用方式，但不使用
 		StudentTest stu = new StudentTest();
 		Class cla = stu.getClass();
@@ -31,6 +33,26 @@ public class ReflectDemo {
 			// 对象始祖类调用
 			Object obj = constructor2.newInstance("李雷",18,"男");
 			System.out.println(obj);
+			
+			// 调用成员
+			Field[] fields = cla1.getDeclaredFields();
+			for(Field field:fields) {
+				System.out.println(field);
+			}
+			
+			Field field = cla1.getDeclaredField("name");
+			field.setAccessible(true);
+			field.set(obj, "韩梅梅");
+			System.out.println(obj);
+			
+			// 调用方法
+			Method[] methods = cla1.getMethods();
+			for(Method m:methods) {
+				System.out.println("方法:"+m);
+			}
+			
+			Method method = cla1.getMethod("toString", null);
+			System.out.println(method.invoke(obj, null));
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
