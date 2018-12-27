@@ -1,6 +1,3 @@
-/activation-1.1.jar
-/aopalliance-1.0.jar
-/apacheds-i18n-2.0.0-M15.jar
 /apacheds-kerberos-codec-2.0.0-M15.jar
 /api-asn1-api-1.0.0-M20.jar
 /api-util-1.0.0-M20.jar
@@ -32,6 +29,7 @@
 /hadoop-auth-2.7.3.jar
 /hadoop-common-2.7.3-tests.jar
 /hadoop-common-2.7.3.jar
+/com/
 /hadoop-hdfs-2.7.3-tests.jar
 /hadoop-hdfs-2.7.3.jar
 /hadoop-hdfs-nfs-2.7.3.jar
@@ -86,4 +84,3 @@
 /xmlenc-0.52.jar
 /xz-1.0.jar
 /zookeeper-3.4.6.jar
-/com/
