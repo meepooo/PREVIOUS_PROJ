@@ -26,6 +26,13 @@ public:
 	//求两数之和
 	vector<int> Solution::twoSum(vector<int>& nums, int target);
 
+	//打气球问题
 	int hitBall(vector<pair<int,int>>& ball);
+
+	// 961. 重复 N 次的元素
+	int repeatedNTimes(vector<int>& A);
+
+	//最长公共前缀
+	string longestCommonPrefix(vector<string>& strs);
 };
 

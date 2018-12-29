@@ -68,11 +68,29 @@ using namespace std;
 //}
 
 // hitBall
+//int main()
+//{
+//	Solution s;
+//	vector<pair<int, int>> vec = { {1,100}, {10,16},{2,8},{1,6},{7,12} };
+//	int shoter = s.hitBall(vec);
+//	cout << "一共需要" << shoter << "个射手" << endl;
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//	vector<int> vec = { 5, 1, 5, 2, 5, 3, 5, 4	};
+//	int num = s.repeatedNTimes(vec);
+//	cout << num << endl;
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
-	vector<pair<int, int>> vec = { {1,100}, {10,16},{2,8},{1,6},{7,12} };
-	int shoter = s.hitBall(vec);
-	cout << "一共需要" << shoter << "个射手" << endl;
+	vector<string> vec = { {"flower"},{"flow"},{"flight"}};
+	string num = s.longestCommonPrefix(vec);
+	cout << num << endl;
 	return 0;
 }

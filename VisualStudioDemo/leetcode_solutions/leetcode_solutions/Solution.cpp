@@ -212,3 +212,56 @@ int Solution::hitBall(vector<pair<int, int>>& ball)
 	}
 	return shoter;
 }
+
+int Solution::repeatedNTimes(vector<int>& A) {
+
+	int num = A.size();
+
+	if (num<4)
+		return -1;
+
+	for (int i = 0; i < num; i++) {
+		for (int j = i + 1; j<num; j++) {
+			if (A[i] == A[j])
+				return A[i];
+		}
+	}
+
+	return -1;
+}
+
+string Solution::longestCommonPrefix(vector<string>& strs)
+{
+	int num = strs.size();
+
+	if (num == 0)
+		return "";
+	else if (num == 1)
+	{
+		return strs[num - 1];
+	}
+	int len = strs[0].length();
+	//求最短长度
+	for (int i = 1; i<num; i++)
+	{
+		len = len<strs[i].length() ? len : strs[i].length();
+	}
+
+	//按位取前缀串
+	string str = "";
+	for (int j = 0; j<len; j++)
+	{
+		char c = strs[0].at(j);
+		for (int i = 1; i<num; i++)
+		{
+			if (strs[i].at(j) != c)
+				goto result;
+
+			if (i == num - 1 && strs[i].at(j) == c)
+				str = str + c;
+		}
+	}
+
+result:
+	return str;
+}
