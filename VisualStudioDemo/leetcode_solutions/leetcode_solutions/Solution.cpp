@@ -237,7 +237,7 @@ int Solution::repeatedNTimes(vector<int>& A) {
 		}
 	}
 	//排序法，判断相邻元素相等
-	else
+	else if (2 == 0)
 	{
 		sort(A.begin(), A.end());
 
@@ -246,6 +246,49 @@ int Solution::repeatedNTimes(vector<int>& A) {
 			if (A[i] == A[i + 1])
 			{
 				result = A[i];
+				goto end;
+			}
+		}
+	}
+	// 利用集合set特性
+	else if (3 == 0)
+	{
+		set<int> s;
+		int s_size = 0;
+		for (int i; i<num; i++)
+		{
+			s.insert(A[i]);
+			s_size += 1;
+			if (s.size() != s_size)
+			{
+				result = A[i];
+				goto end;
+			}
+		}
+	}
+	//特性分析法
+	else
+	{
+		if (A[0] == A[num - 1])
+		{
+			result = A[0];
+			goto end;
+		}
+		for (int i = 1; i<num - 1; i++)
+		{
+			if (A[i - 1] == A[i])
+			{
+				result = A[i];
+				goto end;
+			}
+			else if (A[i + 1] == A[i])
+			{
+				result = A[i];
+				goto end;
+			}
+			else if (A[i - 1] == A[i + 1])
+			{
+				result = A[i - 1];
 				goto end;
 			}
 		}

@@ -11,7 +11,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider.Text;
 
 public class WordCountMain {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 		// 创建一个任务
 		Job job = Job.getInstance();
 				
@@ -29,9 +29,13 @@ public class WordCountMain {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
 		
+		//add Combiner
+		job.setCombinerClass(WordCountReducer.class);
+		
 		// 指定任务的输入路径和输出路径
 		FileInputFormat.setInputPaths(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 		//执行任务
+		job.waitForCompletion(true);
 	}
 }
