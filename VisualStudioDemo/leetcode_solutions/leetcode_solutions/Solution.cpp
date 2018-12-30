@@ -216,18 +216,43 @@ int Solution::hitBall(vector<pair<int, int>>& ball)
 int Solution::repeatedNTimes(vector<int>& A) {
 
 	int num = A.size();
+	int result = -1;
 
-	if (num<4)
+	if (num<4 || num % 2 != 0)
 		return -1;
 
-	for (int i = 0; i < num; i++) {
-		for (int j = i + 1; j<num; j++) {
-			if (A[i] == A[j])
-				return A[i];
+	//暴力法，两次循环
+	if (1 == 0)
+	{
+		for (int i = 0; i<num; i++)
+		{
+			for (int j = i + 1; j<num; j++)
+			{
+				if (A[i] == A[j])
+				{
+					result = A[i];
+					goto end;
+				}
+			}
+		}
+	}
+	//排序法，判断相邻元素相等
+	else
+	{
+		sort(A.begin(), A.end());
+
+		for (int i = 0; i<num - 1; i++)
+		{
+			if (A[i] == A[i + 1])
+			{
+				result = A[i];
+				goto end;
+			}
 		}
 	}
 
-	return -1;
+end:
+	return result;
 }
 
 string Solution::longestCommonPrefix(vector<string>& strs)
