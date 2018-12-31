@@ -34,5 +34,11 @@ public:
 
 	//最长公共前缀
 	string longestCommonPrefix(vector<string>& strs);
+
+	//整数反转
+	int reverse(int x);
+
+	//8. 字符串转换整数 (atoi)
+	int myAtoi(string str);
 };
 

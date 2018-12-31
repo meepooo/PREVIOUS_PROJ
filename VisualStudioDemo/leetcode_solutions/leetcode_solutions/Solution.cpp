@@ -333,3 +333,100 @@ string Solution::longestCommonPrefix(vector<string>& strs)
 result:
 	return str;
 }
+
+int Solution::reverse(int x)
+{
+	int n;
+	long long result = 0;//防止溢出
+
+	if (x >= INT_MAX || x <= INT_MIN)
+		return 0;
+
+	//符号处理
+	n = abs(x);
+
+	if (n<10)
+		return x;
+
+	//用队列存储
+	queue<int> q;
+	while (1) {
+		if (n<10) {
+			q.push(n);
+			break;
+		}
+
+		q.push(n % 10);
+		n /= 10;
+	}
+
+	//组成数字
+	while (!q.empty()) {
+		result = (result * 10) + q.front();
+		q.pop();
+	}
+
+	if (x<0)
+		result = -result;
+
+	//溢出判断
+	if (result > INT_MAX || result < INT_MIN)
+		return 0;
+
+	return result;
+}
+
+int Solution::myAtoi(string str)
+{
+	long long result = 0;
+	char c = 0;
+	char symbol = 0;
+	int lock = 0;
+
+	//空值判定
+	if (str.empty()) {
+		return 0;
+	}
+
+	//char to int 转换 char-48
+	for (int i = 0; i<str.length(); i++) {
+		c = str.at(i);
+		cout << c << "," << (int)c << "," << lock << endl;
+		//空值跳过
+		if (c == 32 && lock != 1) {
+			continue;
+		}
+		//符号位
+		else if ((c == 45 || c == 43) && lock != 1) {
+			if (symbol == 0) {
+				symbol = c;
+				lock = 1;
+				continue;
+			}
+		}
+
+		//数字出现则锁定
+		if (c >= 48 && c <= 57) {
+			result = (result * 10) + c - 48;
+			lock = 1;
+		}
+		//一旦出现非数字则返回result
+		else {
+			goto end;
+		}
+
+		cout << "result:" << result << endl;
+		// 边界值判定
+		if (symbol == '-' && -result <= INT_MIN)
+			return INT_MIN;
+		else if (symbol != '-' && result >= INT_MAX)
+			return INT_MAX;
+	}
+
+end:
+	cout << "symbol:" << symbol << endl;
+	if (symbol == '-')
+		result = -result;
+
+	return (int)result;
+}

@@ -85,12 +85,30 @@ using namespace std;
 //	cout << num << endl;
 //	return 0;
 //}
+//
+//int main()
+//{
+//	Solution s;
+//	vector<string> vec = { {"flower"},{"flow"},{"flight"}};
+//	string num = s.longestCommonPrefix(vec);
+//	cout << num << endl;
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//	int x = -147483648;
+//
+//	cout << s.reverse(x) << endl;
+//
+//	return 0;
+//}
 
 int main()
 {
 	Solution s;
-	vector<string> vec = { {"flower"},{"flow"},{"flight"}};
-	string num = s.longestCommonPrefix(vec);
-	cout << num << endl;
+	string str = "-   234";
+	cout << s.myAtoi(str);
 	return 0;
 }
