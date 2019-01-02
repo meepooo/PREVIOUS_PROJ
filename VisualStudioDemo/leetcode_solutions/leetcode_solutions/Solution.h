@@ -40,5 +40,11 @@ public:
 
 	//8. 字符串转换整数 (atoi)
 	int myAtoi(string str);
+
+	//967. 连续差相同的数字 二叉树实现
+	vector<int> numsSameConsecDiff(int N, int K);
+
+	//209. 长度最小的子数组
+	int minSubArrayLen(int s, vector<int>& nums);
 };
 

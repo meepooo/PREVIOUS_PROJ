@@ -5,6 +5,7 @@
 #include "listDemo.h"
 #include "setDemo.h"
 #include "mapDemo.h"
+#include "BinaryTree.h"
 
 using namespace std;
 
@@ -105,10 +106,51 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	Solution s;
+//	string str = "-   234";
+//	cout << s.myAtoi(str);
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//	vector<int> vec;
+//	vec = s.numsSameConsecDiff(9,1);
+//
+//	for (int e : vec)
+//	{
+//		cout << e << endl;
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	vector<int> vec1 = { 20, 50, 15, 2, 5, 3, 35 };
+//	vector<int> vec2 = { 6,8,22,33,25,57,98 };
+//	BinaryTree* root = new BinaryTree(vec1[0]);
+//	BinaryTree::createTree(root,vec1.begin()+1,vec1.end());
+//	cout << endl;
+//	BinaryTree::createTree(root, vec2.begin(), vec2.end());
+//
+//	//BinaryTree::dispTree(root);
+//
+//	cout << "二叉树节点数：" << BinaryTree::getNodeNum(root) << endl;
+//	cout << "二叉树深数：" << BinaryTree::getDepth(root) << endl;
+//	cout << "二叉树第7层节点数：" << BinaryTree::getNodeNumKthLevel(root,7) << endl;
+//	cout << "二叉树叶子节点数：" << BinaryTree::getNodeNumLeaf(root) << endl; 
+//	cout << "二叉树是否是二分查找树：" << BinaryTree::isValidBST(root) << endl;
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
-	string str = "-   234";
-	cout << s.myAtoi(str);
+	vector<int> vec = { 20, 50, 15, 2, 5, 3, 35 };
+	cout << s.minSubArrayLen(66,vec) << endl;
 	return 0;
 }

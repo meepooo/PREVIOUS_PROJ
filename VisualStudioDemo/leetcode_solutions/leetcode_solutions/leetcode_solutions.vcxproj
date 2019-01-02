@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="listDemo.h" />
     <ClInclude Include="mapDemo.h" />
     <ClInclude Include="queueDemo.h" />
@@ -119,6 +120,7 @@
     <ClInclude Include="vectorDemo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="listDemo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mapDemo.cpp" />
