@@ -25,7 +25,7 @@ public class TestHBase {
 		//创建表
 		//配置ZooKeeper地址
 		Configuration conf = new Configuration();
-		conf.set("hbase.zookeeper.quorum", "172.16.26.111");
+		conf.set("hbase.zookeeper.quorum", "192.168.157.111");
 		
 		//得到一个HBase的客户端
 		HBaseAdmin client = new HBaseAdmin(conf);
@@ -50,7 +50,7 @@ public class TestHBase {
 		//插入数据
 		//配置ZooKeeper地址
 		Configuration conf = new Configuration();
-		conf.set("hbase.zookeeper.quorum", "172.16.26.111");		
+		conf.set("hbase.zookeeper.quorum", "192.168.157.111");		
 		
 		//得到一个客户端
 		HTable client = new HTable(conf, "mytable");
@@ -78,7 +78,7 @@ public class TestHBase {
 		//查询数据:指定Rowkey
 		//配置ZooKeeper地址
 		Configuration conf = new Configuration();
-		conf.set("hbase.zookeeper.quorum", "172.16.26.111");		
+		conf.set("hbase.zookeeper.quorum", "192.168.157.111");		
 		
 		//得到一个客户端
 		HTable client = new HTable(conf, "mytable");
@@ -101,7 +101,7 @@ public class TestHBase {
 		//查询数据
 		//配置ZooKeeper地址
 		Configuration conf = new Configuration();
-		conf.set("hbase.zookeeper.quorum", "172.16.26.111");		
+		conf.set("hbase.zookeeper.quorum", "192.168.157.111");		
 		
 		//得到一个客户端
 		HTable client = new HTable(conf, "mytable");
