@@ -147,10 +147,93 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	Solution s;
+//	vector<int> vec = { 20, 50, 15, 2, 5, 3, 35 };
+//	cout << s.minSubArrayLen(66,vec) << endl;
+//	return 0;
+//}
+
+////973. 最接近原点的 K 个点
+//struct less3{
+//	bool operator() (const int& x, const int& y) const
+//	{
+//		return x*x<y*y;
+//	}
+//};
+//
+//template <class T> struct less2 : binary_function <T, T, bool> {
+//	bool operator() (const T& x, const T& y) const
+//	{
+//		return x*x<y*y;
+//	}
+//};
+//
+//struct compareByValue {
+//	bool operator()(const pair<int, string>& a, const pair<int, string>& b) const
+//	{
+//		return a.second < b.second;
+//	}
+//};
+//
+//int main()
+//{
+//	Solution s;
+//	vector<vector<int>> vec;
+//	vector<vector<int>> result;
+//
+//	vec.push_back({ 3,3 });
+//	vec.push_back({ 1,4 });
+//	vec.push_back({ 4,0 });
+//	vec.push_back({ 1,2 });
+//	vec.push_back({ 3,2 });
+//
+//	result = s.kClosest(vec, 2);
+//
+//	cout << "main:" << endl;
+//	for (auto elem : result)
+//	{
+//		for (auto e : elem)
+//		{
+//			cout << e << "\t";
+//		}
+//		cout << endl;
+//	}
+//	cout << endl;
+//
+//	map<int, string, less3> map;
+//	map[2] = "Bob";
+//	map[3] = "alice";
+//	map[0] = "olive";
+//	map[1] = "tom";
+//	map.insert(pair<int, string>(-100,"BOSS"));	
+//	
+//	for (auto& e : map)
+//	{
+//		cout << e.first << "," << e.second << "\t";
+//	}
+//	cout << endl;
+//	
+//	vector<pair<int, string>> vector(map.begin(), map.end());
+//	sort(vector.begin(), vector.end(), compareByValue());
+//	for (auto&e : vector)
+//	{
+//		cout << e.first << "," << e.second << "\t";
+//	}
+//	cout << endl;
+//
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
-	vector<int> vec = { 20, 50, 15, 2, 5, 3, 35 };
-	cout << s.minSubArrayLen(66,vec) << endl;
+	vector<int> vec;
+	vec.push_back(3);
+	vec.push_back(7);
+	vec.push_back(2);
+	vec.push_back(4);
+	cout << s.largestPerimeter(vec);
 	return 0;
 }

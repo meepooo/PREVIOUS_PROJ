@@ -312,7 +312,7 @@ string Solution::longestCommonPrefix(vector<string>& strs)
 	//求最短长度
 	for (int i = 1; i<num; i++)
 	{
-		len = len<strs[i].length() ? len : strs[i].length();
+		len = len < strs[i].length() ? len : strs[i].length();
 	}
 
 	//按位取前缀串
@@ -602,4 +602,182 @@ int Solution::minSubArrayLen(int s, vector<int>& nums) {
 		return result;
 	}
 
+}
+
+void swapmap(map<long, long>& m1, map<long ,long>& m2)
+{
+	map<long, long> m;
+	m = m1;
+	m1 = m2;
+	m2 = m;
+}
+
+struct nodedata
+{
+	int value;
+	vector<int> point;
+};
+
+struct nodedataCompare
+{
+	bool operator()(const nodedata& a, const nodedata& b)
+	{
+		return a.value < b.value;
+	}
+};
+
+vector<vector<int>> Solution::kClosest(vector<vector<int>>& points, int K)
+{
+	//map容器，增序容器
+	map<int, vector<int>, less<int>> point_map;
+	vector<vector<int>> result;
+
+	//边界值处理
+	if (points.size() < K)
+		return result;
+	else if (points.size() == K)
+		return points;
+
+	//计算平方和
+	int i = 0;
+	for (auto& elem : points)
+	{
+		long j = pow(elem[0], 2) + pow(elem[1], 2);
+		point_map[j] = points[i++];
+	}
+	
+	i = 0;
+	for (auto& elem : point_map)
+	{
+		if (i >= K)
+			break;
+
+		result.push_back(elem.second);
+		i++;
+	}
+
+	return result;
+
+	//链表容器
+	if (1 == 0)
+	{
+		list<nodedata> list;
+		vector<vector<int>> result;
+		nodedata node;
+
+//边界值处理
+if (points.size() < K)
+	return result;
+else if (points.size() == K)
+return points;
+
+//计算平方和
+int i = 0;
+for (auto& elem : points)
+{
+	long j = pow(elem[0], 2) + pow(elem[1], 2);
+	node.value = j;
+	node.point = points[i];
+	list.push_back(node);
+	i++;
+}
+
+list.sort(nodedataCompare());
+
+i = 0;
+for (auto& elem : list)
+{
+	if (i >= K)
+		break;
+
+	result.push_back(elem.point);
+	i++;
+}
+
+return result;
+	}
+
+	//数组容器
+	if (2 == 0)
+	{
+		vector<vector<int>> result;
+
+		//防止平方和溢出
+		vector<vector<int>> sum;
+
+		//边界值处理
+		if (points.size() < K)
+			return result;
+		else if (points.size() == K)
+			return points;
+
+		//计算平方和
+		int i = 0;
+		for (auto& elem : points)
+		{
+			long j = pow(elem[0], 2) + pow(elem[1], 2);
+			sum.push_back({ j, i++ });
+		}
+
+		sort(sum.begin(), sum.end());
+
+		cout << "sort sum:";
+		for (auto elem : sum)
+		{
+			cout << elem[0] << "," << elem[1] << "\t";
+		}
+		cout << endl;
+
+		//返回前K个到result
+		i = 0;
+		while (i < K)
+		{
+			result.push_back(points[sum[i++][1]]);
+		}
+
+		return result;
+	}
+}
+
+int Solution::largestPerimeter(vector<int>& A)
+{
+	int result = 0;
+	//先排序
+	sort(A.rbegin(), A.rend());
+
+	//边界值处理
+	if (A.size() < 3)
+		return 0;
+
+	cout << endl;
+	//再用贪婪算法，动态规划
+	//三角形两边
+	auto left = A.begin();
+	auto right = A.begin();
+	for (int i = 0; i < A.size()-2; i++)	//三角形的底
+	{
+		left = A.begin();
+		left += (i+1);
+		right = left+1;
+
+		//三角形的两条边，满足>0，并且两边和>A[i]
+		while (left != A.end()-1 || right != A.end())
+		{
+			if (left == right)
+			{
+				right++;
+				continue;
+			}
+
+			if (*left > 0 && *right > 0 && (*left + *right) > A[i])
+			{
+				int temp = *left + *right + A[i];
+				result = (result > temp) ? result : temp;
+			}
+
+			left++;
+		}
+	}
+
+	return result;
 }

@@ -46,5 +46,11 @@ public:
 
 	//209. 长度最小的子数组
 	int minSubArrayLen(int s, vector<int>& nums);
+
+	//973. 最接近原点的 K 个点
+	vector<vector<int>> kClosest(vector<vector<int>>& points, int K);
+
+	//976. 三角形的最大周长
+	int largestPerimeter(vector<int>& A);
 };
 
