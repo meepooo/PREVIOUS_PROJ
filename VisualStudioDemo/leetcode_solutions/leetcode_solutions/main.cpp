@@ -226,14 +226,40 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	Solution s;
+//	vector<int> vec;
+//	vec.push_back(3);
+//	vec.push_back(7);
+//	vec.push_back(2);
+//	vec.push_back(4);
+//	cout << s.largestPerimeter(vec);
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
-	vector<int> vec;
-	vec.push_back(3);
-	vec.push_back(7);
-	vec.push_back(2);
-	vec.push_back(4);
-	cout << s.largestPerimeter(vec);
+	//vector<int> vec = { 4,5,0,-2,-3,1 };
+	vector<int> vec = { -1,2,9 };
+	cout << s.subarraysDivByK(vec, 2);
+
+	cout << "vec:";
+	for (auto& e : vec)
+	{
+		cout << e << "\t";
+	}
+	cout << endl;
+	
+	swap(vec[0], vec[1]);
+
+	cout << "vec:";
+	for (auto& e : vec)
+	{
+		cout << e << "\t";
+	}
+	cout << endl;
+
 	return 0;
 }

@@ -52,5 +52,8 @@ public:
 
 	//976. 三角形的最大周长
 	int largestPerimeter(vector<int>& A);
+
+	//974. 和可被 K 整除的子数组
+	int subarraysDivByK(vector<int>& A, int K);
 };
 
