@@ -238,28 +238,37 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	Solution s;
+//	//vector<int> vec = { 4,5,0,-2,-3,1 };
+//	vector<int> vec = { -1,2,9 };
+//	cout << s.subarraysDivByK(vec, 2);
+//
+//	cout << "vec:";
+//	for (auto& e : vec)
+//	{
+//		cout << e << "\t";
+//	}
+//	cout << endl;
+//	
+//	swap(vec[0], vec[1]);
+//
+//	cout << "vec:";
+//	for (auto& e : vec)
+//	{
+//		cout << e << "\t";
+//	}
+//	cout << endl;
+//
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
-	//vector<int> vec = { 4,5,0,-2,-3,1 };
-	vector<int> vec = { -1,2,9 };
-	cout << s.subarraysDivByK(vec, 2);
 
-	cout << "vec:";
-	for (auto& e : vec)
-	{
-		cout << e << "\t";
-	}
-	cout << endl;
-	
-	swap(vec[0], vec[1]);
-
-	cout << "vec:";
-	for (auto& e : vec)
-	{
-		cout << e << "\t";
-	}
-	cout << endl;
+	cout << s.strWithout3a3b(5,8);
 
 	return 0;
 }

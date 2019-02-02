@@ -55,5 +55,8 @@ public:
 
 	//974. 和可被 K 整除的子数组
 	int subarraysDivByK(vector<int>& A, int K);
+
+	//984. 不含 AAA 或 BBB 的字符串
+	string strWithout3a3b(int A, int B);
 };
 

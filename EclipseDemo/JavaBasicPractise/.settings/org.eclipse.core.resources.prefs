@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/com/jdbc/demo/dao/UserDao.java=UTF-8
+encoding//src/com/jdbc/demo/dao/impl/UserDaoImpl.java=UTF-8
+encoding//src/com/jdbc/demo/test/MainTest.java=UTF-8
+encoding//src/com/jdbc/demo/test/TestDemo.java=UTF-8
+encoding//src/com/jdbc/demo/util/JDBCUtil.java=UTF-8
