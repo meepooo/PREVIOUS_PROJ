@@ -11,6 +11,14 @@
 
 using namespace std;
 
+struct TreeNodeA {
+     int val;
+     TreeNodeA *left;
+     TreeNodeA *right;
+	 TreeNodeA(int x) : val(x), left(NULL), right(NULL) {};
+};
+
+
 class Solution
 {
 public:
@@ -58,5 +66,11 @@ public:
 
 	//984. 不含 AAA 或 BBB 的字符串
 	string strWithout3a3b(int A, int B);
+
+	//985. 查询后的偶数和
+	vector<int> sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& queries);
+
+	//988. 从叶结点开始的最小字符串
+	string smallestFromLeaf(TreeNodeA* root);
 };
 

@@ -952,3 +952,94 @@ string Solution::strWithout3a3b(int A, int B)
 
 	return result;
 }
+
+vector<int> Solution::sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& queries)
+{
+	vector<int> result;
+	int sum = 0;
+	//边界值
+	if (A.size() == 0 || queries.size() == 0)
+	{
+		return result;
+	}
+
+	for (int i = 0; i < A.size(); i++)
+	{
+		if (A[i] % 2 == 0)
+			sum += A[i];
+	}
+
+	//算法
+	for (int i = 0; i < queries.size(); i++)
+	{
+		int index = queries[i][1];
+		int temp = A[index];
+		int changeVal = A[index] % 2 == 0 ? A[index] : 0;
+
+		//更新A
+		A[index] = A[index] + queries[i][0];
+
+		//更新sum
+		if (A[index] % 2 == 0)
+			sum = sum - changeVal + A[index];
+		else
+			sum -= changeVal;
+
+		result.push_back(sum);
+
+		for (auto &e : A)
+		{
+			cout << e << ",";
+		}
+	}
+	cout << endl;
+
+	return result;
+}
+
+void searchTree(TreeNodeA* root, vector<int>& vec) 
+{
+	if (root == NULL)
+		return;
+
+	vec.push_back(root->val);	
+	searchTree(root->left, vec);
+	searchTree(root->right, vec);
+}
+
+string Solution::smallestFromLeaf(TreeNodeA * root)
+{
+	string result;
+	for (int i = 0; i < 1000; i++)
+		result += "z";
+
+	//数组下标从1开始
+	/*vector<int> vec;
+	vec.push_back(0);*/
+
+	vector<int> vec = { 0, 0, 1, 2, 3, 4, 3, 4 };
+	//先序遍历存放到数组
+	//searchTree(root, vec);
+
+	for (auto &e : vec)
+	{
+		cout << e << ",";
+	}
+	cout << endl;
+
+	//堆算法求解，不是满二叉树
+	//子节点=父节点*2
+	string temp;
+	for (int i = vec.size(); i > 0; i--)
+	{
+		temp = "";
+		for (int j = i; j > 1; j/=2)
+		{			
+			temp += vec[j];
+		}
+		temp += vec[1];
+		result = (result < temp) ? result : temp;
+	}
+
+	return result;
+}

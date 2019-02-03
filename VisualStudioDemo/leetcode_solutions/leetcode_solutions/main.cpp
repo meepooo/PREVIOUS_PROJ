@@ -264,11 +264,39 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	Solution s;
+//
+//	cout << s.strWithout3a3b(5,8);
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//
+//	vector<int> A = {1, 2, 3, 4};
+//	vector<vector<int>> queries = { {1, 0},{-3, 1},{-4, 0},{2, 3} };
+//
+//	vector<int> result = s.sumEvenAfterQueries(A, queries);
+//	for (auto &e : result)
+//		cout << e << ',';
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
 
-	cout << s.strWithout3a3b(5,8);
+	vector<int> A = {1, 2, 3, 4};
+	vector<vector<int>> queries = { {1, 0},{-3, 1},{-4, 0},{2, 3} };
+
+	TreeNodeA *root = new TreeNodeA(1);
+	string result = s.smallestFromLeaf(root);
+	for (auto &e : result)
+		cout << e << ',';
 
 	return 0;
 }
