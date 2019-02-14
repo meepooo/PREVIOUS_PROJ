@@ -72,5 +72,8 @@ public:
 
 	//988. 从叶结点开始的最小字符串
 	string smallestFromLeaf(TreeNodeA* root);
+
+	//989. 数组形式的整数加法
+	vector<int> addToArrayForm(vector<int>& A, int K);
 };
 

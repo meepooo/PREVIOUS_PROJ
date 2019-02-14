@@ -4,6 +4,16 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
+import java.sql.Statement;
+import java.util.Properties;
+import java.util.logging.Logger;
+
+import com.mysql.jdbc.Driver;
 
 public class ReflectDemo {
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
@@ -54,6 +64,30 @@ public class ReflectDemo {
 			Method method = cla1.getMethod("toString", null);
 			System.out.println(method.invoke(obj, null));
 		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			//×¢²áÇý¶¯
+			DriverManager.registerDriver(new Driver());
+			//connect
+			Connection connection = DriverManager.getConnection("jdbc:mysql://114.115.222.76:3306/testdb", "test", "Difficult_password1234");
+			//statement
+			Statement st = connection.createStatement();
+			
+			String sql = "select * from user";
+			
+			ResultSet rs = st.executeQuery(sql);
+			
+			while(rs.next()) {
+				int id = rs.getInt(1);
+				String name = rs.getString(2);
+				
+				System.out.println("result:" + id + name);
+			}
+			
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

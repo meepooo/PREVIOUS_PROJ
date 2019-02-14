@@ -1,15 +1,19 @@
 package com.advance;
 
+import org.junit.Test;
+
+
 public class StudentTest {
 	private String name;
 	private int age;
 	private String sex;
 	
-	StudentTest(){
+	
+	public StudentTest(){
 		
 	}
 	
-	StudentTest(String name, int age, String sex){
+	public StudentTest(String name, int age, String sex){
 		this.name = name;
 		this.age = age;
 		this.sex = sex;
@@ -27,5 +31,10 @@ public class StudentTest {
 	public String toString() {
 		return name+age+sex;
 		
+	}
+	
+	@Test
+	public void hello() {
+		System.out.println("hello");
 	}
 }
