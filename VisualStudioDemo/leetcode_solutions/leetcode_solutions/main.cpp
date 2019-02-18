@@ -301,17 +301,74 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	Solution s;
+//
+//	vector<int> A = { 2, 1, 5 };
+//	vector<int> result;
+//	int K = 806;
+//
+//	result = s.addToArrayForm(A,K);
+//	for (auto &e : result)
+//		cout << e << ',';
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//	bool result = false;
+//
+//	string A = "ab#c";
+//	string B = "ad#c";
+//
+//	result = s.backspaceCompare(A, B);
+//	
+//	cout << boolalpha << result << endl;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//	//vector<int> A = {0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0};
+//	vector<int> A = { 0,2,2 };
+//	int result;
+//
+//	result = s.longestMountain(A);
+//
+//	cout << result << endl;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//	vector<int> A = { 1,2,3,6,2,3,4,7,8 };
+//	int W = 3;
+//	bool result;
+//
+//	result = s.isNStraightHand(A,W);
+//
+//	cout << boolalpha << result << endl;
+//
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
+	vector<int> A = { 1,2,3,6,2,3,4,7,8 };
+	int W = 3;
+	bool result;
+	TreeNodeA *root = new TreeNodeA(1);
+	result = s.isCousins(root,3,4);
 
-	vector<int> A = { 2, 1, 5 };
-	vector<int> result;
-	int K = 806;
-
-	result = s.addToArrayForm(A,K);
-	for (auto &e : result)
-		cout << e << ',';
+	cout << boolalpha << result << endl;
 
 	return 0;
 }

@@ -75,5 +75,17 @@ public:
 
 	//989. 数组形式的整数加法
 	vector<int> addToArrayForm(vector<int>& A, int K);
+
+	//844. 比较含退格的字符串
+	bool backspaceCompare(string S, string T);
+
+	//845. 数组中的最长山脉
+	int longestMountain(vector<int>& A);
+
+	//846. 一手顺子
+	bool isNStraightHand(vector<int>& hand, int W);
+
+	//993. 二叉树的堂兄弟节点
+	bool isCousins(TreeNodeA* root, int x, int y);
 };
 

@@ -13,5 +13,18 @@ public class HelloWorld {
 		System.out.println(arr.get(0)+","+arr.get(1)+","+arr.get(2));
 		arr.remove(1);
 		System.out.println(arr.get(0)+","+arr.get(1)+",");
+		
+		String str = "hello world";
+		char[] buf;
+		buf = str.toCharArray();
+		System.out.println(buf);
+		
+//		String str2;
+//		str2 = buf.toString();
+//		System.out.println(str2);
+		
+		String str1 = String.valueOf(buf);
+		System.out.println(str1);
+		
 	}
 }

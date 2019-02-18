@@ -1105,3 +1105,286 @@ vector<int> Solution::addToArrayForm(vector<int>& A, int K)
 
 	return result;
 }
+
+template <typename T>
+bool isSameStack(stack<T> s, stack<T> t)
+{
+	//长度相等
+	if (s.size() != t.size())
+		return false;
+
+	//逐个弹出栈中元素比较
+	while (!s.empty())
+	{
+		if (s.top() != t.top())
+		{
+			return false;
+		}
+
+		s.pop();
+		t.pop();
+	}
+	return true;
+}
+
+bool Solution::backspaceCompare(string S, string T)
+{
+	//用栈的属性，字符串按字符入栈，遇#出栈，最后结果比较
+	stack<char> s, t;
+
+	//S入栈
+	for (auto& e : S)
+	{
+		//cout << e << endl;
+		if (e == '#')
+		{
+			if (!s.empty())
+			{
+				s.pop();
+			}
+			continue;
+		}
+
+		s.push(e);
+	}
+
+	//T入栈
+	for (auto& e : T)
+	{
+		//cout << e << endl;
+		if (e == '#')
+		{
+			if (!t.empty())
+			{
+				t.pop();
+			}
+			continue;
+		}
+
+		t.push(e);
+	}
+
+	//s与t比较
+	return isSameStack(s, t);
+}
+
+int Solution::longestMountain(vector<int>& A)
+{
+	int result = 0;
+
+	if (A.size()<3)
+	{
+		return result;
+	}
+	//思路一：
+	//初始化设定数组开头是山顶，后面实现找山顶与计算山脉长度length，爬山长度up，下山长度down
+	//三种情况，1. A[i] == A[i-1] 则结果存入result，length清0，up清0，down清0
+	//三种情况，2. A[i] > A[i-1]，提高 up++
+	//三种情况，3. A[i] < A[i-1]，下降 则down++
+	//考虑山顶与山底的情况
+	
+	//思路二：
+	//新建一个数组，连续上山-1，下山1，平地0累计计入数组B
+	//计算B[i]-B[i-1]的值最大
+	vector<int> B;
+	int len =2;
+	int oflag = -2;
+	int nflag = -2;
+
+	//初始化原上山、下山标志
+	if (A[1] == A[0])
+	{
+		oflag = 0;
+	}
+	else if (A[1] > A[0])
+	{
+		oflag = -1;
+	}
+	else
+	{
+		oflag = 1;
+	}
+
+	//得出数组B
+	for (int i=2;i<A.size();i++)
+	{
+		//平地
+		if (A[i] == A[i - 1])
+		{
+			nflag = 0;
+			if (oflag != nflag)
+			{
+				B.push_back(len * oflag);
+				oflag = 0;
+				len = 1;
+			}
+		}
+		//上山
+		else if(A[i] > A[i - 1]) 
+		{
+			nflag = -1;
+			if (oflag != nflag)
+			{
+				B.push_back(len * oflag);
+				oflag = -1;
+				len = 1;
+			}
+		}
+		//下山
+		else
+		{
+			nflag = 1;
+			if (oflag != nflag)
+			{
+				B.push_back(len * oflag);
+				oflag = 1;
+				len = 1;
+			}
+		}
+
+		len++;
+	}
+	B.push_back(len * oflag);
+
+	for (auto& e : B)
+	{
+		cout << e << "\t";
+	}
+	cout << endl;
+	//对数组B相邻元素求最大差
+	for (int i = 1; i < B.size(); i++)
+	{
+		if (B[i] == 0 || B[i-1]==0)
+			continue;
+
+		len = B[i] - B[i - 1] -1;
+		result = result > len ? result : len;
+	}
+
+	return result;
+}
+
+bool searchAndRemoveList(list<int>& listHand, int val)
+{
+	auto it = listHand.begin();
+	for(;it!=listHand.end();it++)
+	{
+		if (*it == val)
+		{
+			listHand.erase(it);
+			//listHand.pop_front();
+			return true;
+		}
+	}
+
+	return false;
+}
+
+bool Solution::isNStraightHand(vector<int>& hand, int W)
+{
+	bool result = false;
+
+	//边界值
+	if (hand.size() == 0)
+		return false;
+
+	if (W == 1)
+		return true;
+
+	//hand.size是W的整数倍
+	if (hand.size() % W != 0)
+		return false;
+
+	//牌分组算法
+	//先排序，存入list应该比较高效
+	list<int> listHand;
+
+	sort(hand.begin(), hand.end());
+	for (auto& e : hand)
+	{
+		listHand.push_back(e);
+	}
+
+	int lastVal = 0;
+	int len = 0;
+
+	while (!listHand.empty())
+	{
+		for (auto &e : listHand)
+			cout << e << "\t";
+		cout << endl;
+
+		//首位初始化
+		if (len == 0)
+		{
+			lastVal = *listHand.begin();
+			len++;
+			listHand.pop_front();
+			continue;
+		}
+
+		if (searchAndRemoveList(listHand, lastVal + 1) == false)
+			return false;
+
+		len++;
+		lastVal++;
+
+		if (len == W)
+		{
+			len = 0;
+		}
+	}
+
+	return true;
+}
+
+void searchTreeNode(TreeNodeA * root,int val, int& deep, TreeNodeA * parent)
+{
+	//int d=0;
+	//TreeNodeA * p=root;
+
+	//if (root == nullptr)
+	//{
+	//	return;
+	//}
+	//else if (root->val == val)
+	//{
+	//	deep = d;
+	//	parent = p;
+	//	return;
+	//}
+	//else
+	//{
+	//	parent = root;
+
+	//	searchTreeNode(root->left, val, deep,  p);
+	//	searchTreeNode(root->right, val, deep, p);
+	//	d++;
+	//}
+	deep = 100;
+	parent = root;
+}
+
+bool Solution::isCousins(TreeNodeA * root, int x, int y)
+{
+	//递归
+	int deepX = 0;
+	int deepY = 0;
+	TreeNodeA * parentX = root;
+	TreeNodeA * parentY = root;
+
+	//递归函数
+	searchTreeNode(root, x, deepX, parentX);
+	searchTreeNode(root, x, deepY, parentY);
+
+	cout << deepX << "," << deepY << endl;
+	cout << parentX->val << endl;
+	cout << parentX->val << endl;
+
+	if (deepX == deepY && parentX != parentY)
+	{
+		return true;
+	}
+
+	return false;
+}
