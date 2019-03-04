@@ -359,16 +359,56 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	Solution s;
+//	vector<int> A = { 1,2,3,6,2,3,4,7,8 };
+//	int W = 3;
+//	bool result;
+//	TreeNodeA *root = new TreeNodeA(1);
+//	result = s.isCousins(root,3,4);
+//
+//	cout << boolalpha << result << endl;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	Solution s;
+//	vector<vector<int>> A = { {1,3},{1,4},{2,3},{2,4},{4,3} };
+//	//vector<vector<int>> A = { { 1,2 } };
+//	//vector<vector<int>> A = { { 1,3 },{ 2,3 },{ 3,1 } };
+//	int N = 4;
+//	int result;
+//
+//	result = s.findJudge(N, A);
+//
+//	cout << result << endl;
+//
+//	return 0;
+//}
+
 int main()
 {
 	Solution s;
-	vector<int> A = { 1,2,3,6,2,3,4,7,8 };
-	int W = 3;
-	bool result;
-	TreeNodeA *root = new TreeNodeA(1);
-	result = s.isCousins(root,3,4);
+	//vector<vector<char>> A = {{'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', 'p', '.', '.', '.', '.'}, {'.', '.', '.', 'R', '.', '.', '.', 'p'}, {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', 'p', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.'}};
+	
+	vector<vector<char>> A = {
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', '.', '.', 'p', '.', '.', '.', '.'},
+		{'.', '.', '.', 'B', '.', '.', '.', '.'},
+		{'.', 'p', 'B', 'R', 'p', 'B', 'p', '.'},
+		{'.', '.', '.', 'p', 'p', '.', '.', '.'}, 
+		{'.', '.', '.', 'B', '.', '.', '.', '.'}, 
+		{'.', '.', '.', 'p', '.', '.', '.', '.'}, 
+		{'.', '.', '.', '.', '.', '.', '.', '.'}};
 
-	cout << boolalpha << result << endl;
+	int result;
 
+	result = s.numRookCaptures(A);
+
+	std::cout << result;
+	
 	return 0;
 }

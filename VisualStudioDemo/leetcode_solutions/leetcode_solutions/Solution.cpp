@@ -431,15 +431,9 @@ end:
 	return (int)result;
 }
 
-struct TreeNode {
-	int val;
-	int level;
-	TreeNode *p;
-	TreeNode *left;
-	TreeNode *right;
-};
 
-void dispTree(TreeNode* root, vector<int>* vec, int N, string str) {
+
+void dispTree(PTreeNode* root, vector<int>* vec, int N, string str) {
 
 	if (root == NULL)
 		return;
@@ -457,7 +451,7 @@ void dispTree(TreeNode* root, vector<int>* vec, int N, string str) {
 	dispTree(root->right, vec, N, str);
 }
 
-void createTree(TreeNode* root, int N, int K) {
+void createTree(PTreeNode* root, int N, int K) {
 	//cout << "val:" << root->val << ",level:" << root->level << endl;
 
 	// N is max level
@@ -465,7 +459,7 @@ void createTree(TreeNode* root, int N, int K) {
 		return;
 
 	if (root->val - K >= 0) {
-		TreeNode *left = new TreeNode();
+		PTreeNode *left = new PTreeNode();
 		left->p = root;
 		root->left = left;
 		root->left->val = root->val - K;
@@ -475,7 +469,7 @@ void createTree(TreeNode* root, int N, int K) {
 	}
 
 	if (root->val + K <= 9) {
-		TreeNode *right = new TreeNode();
+		PTreeNode *right = new PTreeNode();
 		right->p = root;
 		root->right = right;
 		root->right->val = root->val + K;
@@ -506,7 +500,7 @@ vector<int> Solution::numsSameConsecDiff(int N, int K) {
 
 	//所有可能的tree
 	for (int i = 1; i <= 9; i++) {
-		TreeNode *root = new TreeNode();
+		PTreeNode *root = new PTreeNode();
 
 		root->val = i;
 		root->level = 1;
@@ -997,7 +991,7 @@ vector<int> Solution::sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& q
 	return result;
 }
 
-void searchTree(TreeNodeA* root, vector<int>& vec) 
+void searchTree(TreeNode* root, vector<int>& vec) 
 {
 	if (root == NULL)
 		return;
@@ -1007,7 +1001,7 @@ void searchTree(TreeNodeA* root, vector<int>& vec)
 	searchTree(root->right, vec);
 }
 
-string Solution::smallestFromLeaf(TreeNodeA * root)
+string Solution::smallestFromLeaf(TreeNode * root)
 {
 	string result;
 	for (int i = 0; i < 1000; i++)
@@ -1338,10 +1332,10 @@ bool Solution::isNStraightHand(vector<int>& hand, int W)
 	return true;
 }
 
-void searchTreeNode(TreeNodeA * root,int val, int& deep, TreeNodeA * parent)
+void searchTreeNode(TreeNode * root,int val, int& deep, TreeNode * parent)
 {
 	//int d=0;
-	//TreeNodeA * p=root;
+	//TreeNode * p=root;
 
 	//if (root == nullptr)
 	//{
@@ -1365,13 +1359,13 @@ void searchTreeNode(TreeNodeA * root,int val, int& deep, TreeNodeA * parent)
 	parent = root;
 }
 
-bool Solution::isCousins(TreeNodeA * root, int x, int y)
+bool Solution::isCousins(TreeNode * root, int x, int y)
 {
 	//递归
 	int deepX = 0;
 	int deepY = 0;
-	TreeNodeA * parentX = root;
-	TreeNodeA * parentY = root;
+	TreeNode * parentX = root;
+	TreeNode * parentY = root;
 
 	//递归函数
 	searchTreeNode(root, x, deepX, parentX);
@@ -1387,4 +1381,166 @@ bool Solution::isCousins(TreeNodeA * root, int x, int y)
 	}
 
 	return false;
+}
+
+int Solution::findJudge(int N, vector<vector<int>>& trust)
+{
+	int result = -1;
+	int len = trust.size();
+	set<int> A;
+
+	//边界值判定
+	if (N == 1)
+		return 1;
+
+	//遍历把每个人都当法官
+	for (int i = 1; i <= N; i++)
+	{
+		A.clear();
+		//遍历trust数组
+		for (int j = 0; j<len; j++)
+		{
+			//法官不相信任何人
+			if (trust[j][0] == i)
+			{
+				result = -1;
+				break;
+			}
+
+			//每个人相信法官，去重插入set
+			if (trust[j][1] == i)
+				A.insert(trust[j][0]);
+
+			//满足N-1个人相信法官
+			if (A.size() == N - 1)
+				result = i;
+		}
+		if (result != -1)
+			return result;
+
+	}
+
+	return result;
+}
+int Solution::numRookCaptures(vector<vector<char>>& board)
+{
+	//R只有四个方向四个方向去找
+	int x = -1, y = -1;
+	int result = 0;
+
+	//find R
+	for (int i = 0; i<8; i++)
+	{
+		for (int j = 0; j<8; j++)
+			if (board[i][j] == 'R')
+			{
+				x = i;
+				y = j;
+			}
+
+	}
+
+	if (x == -1 || y == -1)
+		return 0;
+
+	//左
+	for (int i = y - 1; i >= 0; i--)
+	{
+		if (board[x][i] == 'B')
+		{
+			break;
+		}
+
+		if (board[x][i] == 'p')
+		{
+			result++;
+			break;
+		}
+	}
+
+	//右
+	for (int i = y + 1; i < 8; i++)
+	{
+		if (board[x][i] == 'B')
+		{
+			break;
+		}
+
+		if (board[x][i] == 'p')
+		{
+			result++;
+			break;
+		}
+	}
+
+	//上
+	for (int i = x - 1; i >= 0; i--)
+	{
+		if (board[i][y] == 'B')
+		{
+			break;
+		}
+
+		if (board[i][y] == 'p')
+		{
+			result++;
+			break;
+		}
+	}
+
+	//右
+	for (int i = x + 1; i < 8; i++)
+	{
+		if (board[i][y] == 'B')
+		{
+			break;
+		}
+
+		if (board[i][y] == 'p')
+		{
+			result++;
+			break;
+		}
+	}
+
+	return result;
+}
+
+/**
+* Definition for a binary tree node.
+* struct TreeNode {
+*     int val;
+*     TreeNode *left;
+*     TreeNode *right;
+*     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+* };
+*/
+TreeNode * Solution::insertIntoMaxTree(TreeNode * root, int val)
+{
+	//新增父节点
+	TreeNode dummy(INT_MAX);
+	dummy.right = root;
+
+	//前置阶段
+	TreeNode *pre = &dummy;
+
+	//新插入节点
+	TreeNode *x = new TreeNode(val);
+
+	//遍历右节点
+	for (TreeNode *cur = root; cur != NULL; cur = cur->right) {
+
+		// val大于右节点的值，则插入Node，但是不改变原树指向
+		if (val > cur->val) {
+			x->left = cur;
+			break;
+		}
+		// val小于节点的值，则记录位置
+		else pre = cur;
+	}
+
+	//循环遍历结束，x指向应该指向的节点
+	//x的前置节点未指向，前置节点已经赋值为pre
+	pre->right = x;
+	return dummy.right;
 }

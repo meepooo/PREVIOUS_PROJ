@@ -20,6 +20,9 @@ public class ServletLogin extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("run doGet");
+		req.setCharacterEncoding("UTF-8");
+		resp.setHeader("Content-Type", "text/html; charset=UTF-8 ");
+		
 		PrintWriter writer = resp.getWriter();
 
 		// 1.获取name，password
@@ -52,7 +55,7 @@ public class ServletLogin extends HttpServlet {
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
 
 			// connect
-			conn = DriverManager.getConnection("jdbc:mysql://114.115.222.76:3306/testdb", "test",
+			conn = DriverManager.getConnection("jdbc:mysql://114.115.149.137:3306/testdb", "test",
 					"Difficult_password1234");
 
 			String sql = "select * from user where name = ? ";
@@ -67,7 +70,10 @@ public class ServletLogin extends HttpServlet {
 				System.out.println("rs.password:" + rs.getString("password") + ",user.password:" + user.getPassword());
 				if (rs.getString("password").equals(user.getPassword())) {
 					System.out.println("登录成功");
-					resStr = "<h1>login success</h1>";
+					resStr = "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
+							+ "<h1>login success</h1>\n"
+							+ "<h1><a href=\"download/1.jpg\">美女</a></h1><br>"
+							+ "<h1><a href=\"download/2.jpg\">乐乐</a></h1><br>";
 				}
 			}
 

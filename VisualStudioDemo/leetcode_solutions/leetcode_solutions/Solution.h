@@ -11,13 +11,20 @@
 
 using namespace std;
 
-struct TreeNodeA {
+struct TreeNode {
      int val;
-     TreeNodeA *left;
-     TreeNodeA *right;
-	 TreeNodeA(int x) : val(x), left(NULL), right(NULL) {};
+     TreeNode *left;
+     TreeNode *right;
+	 TreeNode(int x) : val(x), left(NULL), right(NULL) {};
 };
 
+struct PTreeNode {
+	int val;
+	int level;
+	PTreeNode *p;
+	PTreeNode *left;
+	PTreeNode *right;
+};
 
 class Solution
 {
@@ -71,7 +78,7 @@ public:
 	vector<int> sumEvenAfterQueries(vector<int>& A, vector<vector<int>>& queries);
 
 	//988. 从叶结点开始的最小字符串
-	string smallestFromLeaf(TreeNodeA* root);
+	string smallestFromLeaf(TreeNode* root);
 
 	//989. 数组形式的整数加法
 	vector<int> addToArrayForm(vector<int>& A, int K);
@@ -86,6 +93,15 @@ public:
 	bool isNStraightHand(vector<int>& hand, int W);
 
 	//993. 二叉树的堂兄弟节点
-	bool isCousins(TreeNodeA* root, int x, int y);
+	bool isCousins(TreeNode* root, int x, int y);
+
+	//997. 找到小镇的法官
+	int findJudge(int N, vector<vector<int>>& trust);
+
+	//999. 车的可用捕获量
+	int numRookCaptures(vector<vector<char>>& board);
+
+	//998. 最大二叉树 II
+	TreeNode* insertIntoMaxTree(TreeNode* root, int val);
 };
 

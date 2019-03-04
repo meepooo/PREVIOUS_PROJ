@@ -8,7 +8,7 @@
 	<session-factory>
 		<!-- JDBC配置 -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://192.168.2.219:3306/testdb</property>
+		<property name="hibernate.connection.url">jdbc:mysql://139.9.2.241:3306/testdb</property>
 		<property name="hibernate.connection.username">test</property>
 		<property name="hibernate.connection.password">Difficult_password1234</property>
 		
@@ -22,8 +22,9 @@
 		<!-- 自动建表 -->
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		
-		<!-- 设置事务隔离级别 -->
+		<!-- 设置事务隔离级别 
 		<property name="hibernate.connection.isolation">3</property>
+		-->
 		
 		<!-- 映射 -->
 		<mapping resource="com/lucky/User.hbm.xml"></mapping>
