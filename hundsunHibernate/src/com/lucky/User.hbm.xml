@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 映射文件 -->
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.lucky.User" table="user">
+		<!-- 主键 -->
+		<id name="id" column="id">
+			<generator class="assigned"></generator>
+		</id>
+		
+		<!-- 主键以外的字段 -->
+		<property name="name" column="name" length="64" type="string"></property>
+	</class>
+</hibernate-mapping>
