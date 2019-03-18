@@ -16,7 +16,7 @@
             "MIMode": "gdb",
             "windows": {
                 "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-                "miDebuggerPath": "C:/MinGW/bin/gdb.exe"
+                "miDebuggerPath": "C:/Program Files/mingw-w64/mingw64/bin/gdb.exe"
             },
             "setupCommands": [
                 {
@@ -28,5 +28,4 @@
             "preLaunchTask": "Build"
         }
     ]
-
 } 
