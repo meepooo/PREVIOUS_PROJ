@@ -18,14 +18,4 @@
 	<context:component-scan base-package="com.hundsun.service"></context:component-scan>
 	<context:component-scan base-package="com.hundsun.dao"></context:component-scan>
 	
-	<!-- Spring IoV 控制反转-->
-	<bean id="ServiceDemoImplID" class="com.hundsun.service.ServiceDemoImpl">
-	<!-- DI 依赖注入 -->
-		<property name="dao" ref="DaoDemoImplID"></property>
-	<!-- 属性注入 
-		<property name="name" value="王冠杰"></property>
-		-->
-	</bean>
-	
-	<bean id="DaoDemoImplID" class="com.hundsun.dao.DaoDemoImpl"></bean>
 </beans>
