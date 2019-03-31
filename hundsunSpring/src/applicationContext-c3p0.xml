@@ -18,10 +18,10 @@
 	<context:component-scan base-package="com.hundsun.service"></context:component-scan>
 	<context:component-scan base-package="com.hundsun.dao"></context:component-scan>
 	
-	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://139.9.2.241:3306/testdb"></property>
-		<property name="username" value="test"></property>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://139.9.2.241:3306/testdb"></property>
+		<property name="user" value="test"></property>
 		<property name="password" value="Difficult_password1234"></property>
 	</bean>
 	

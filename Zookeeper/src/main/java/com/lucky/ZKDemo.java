@@ -17,7 +17,8 @@ import org.junit.Test;
 
 public class ZKDemo {
 
-	private String connectString = "114.115.222.76:32770,114.115.222.76:32773,114.115.222.76:32776";
+//	private String connectString = "114.115.222.76:32770,114.115.222.76:32773,114.115.222.76:32776";
+	private String connectString = "192.168.17.111:2181";
 	private int sessionTimeout = 3000;
 	ZooKeeper zooKeeper = null;
 	private String parentNode = "/server";
